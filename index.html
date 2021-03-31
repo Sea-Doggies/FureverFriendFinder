@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="app.js" delayed></script>
+		<
 		<title>Document</title>
 	</head>
 	<body>
@@ -14,15 +15,16 @@
 
 			<div class="questionOneSection">
 				<img src="#" alt="#" />
-				<p>
-					Pellentesque habitant morbi tristique senectus et netus et
-					malesuada fames ac turpis egestas.
-				</p>
-				<form class="question">
+				<p>Do you prefer brains or brawn?</p>
+				<form>
 					<label>
-						<select>
-							<option value=""></option>
-							<option value=""></option>
+						<select name="smartOrStrong" id="intelligence">
+							<option value="intelligent">
+								I'm into bookworms
+							</option>
+							<option value="strong">
+								I like 'em strong like bull!
+							</option>
 						</select>
 					</label>
 				</form>
@@ -30,33 +32,44 @@
 			<div class="questionTwoSection">
 				<img src="#" alt="#" />
 				<p>
-					Pellentesque habitant morbi tristique senectus et netus et
-					malesuada fames ac turpis egestas.
+					Do you prefer a dog that's more laid-back or do you like a
+					dog that leads the way?
 				</p>
 				<form>
-					<label>
-						<select>
-							<option value=""></option>
-							<option value=""></option>
-						</select>
-					</label>
+					<select name="stubbornOrDocile" id="stubborn">
+						<option value="stubborn">
+							I like a dog who knows what they want
+						</option>
+						<option value="docile">
+							I like a dog that goes with the flow
+						</option>
+					</select>
+					<label for="stubbornOrDocile"></label>
+
+					<!-- Correct all labels -->
 				</form>
 			</div>
-			<div class="questionTwoSection">
+			<div class="questionThreeSection">
 				<img src="#" alt="#" />
 				<p>
-					Pellentesque habitant morbi tristique senectus et netus et
-					malesuada fames ac turpis egestas.
+					Do you prefer a quiet night in on the couch or a weekend
+					adventure?
 				</p>
 				<form>
 					<label>
-						<select>
-							<option value=""></option>
-							<option value=""></option>
+						<select name="activeOrCalm" id="active">
+							<option value="active">
+								I like a weekend adventure
+							</option>
+							<option value="calm">
+								I like a dog that's a chill potato
+							</option>
 						</select>
 					</label>
 				</form>
 			</div>
+
+			<button id="button" class="resultButton">See your result!</button>
 		</div>
 
 		<div class="resultSection" id="result">

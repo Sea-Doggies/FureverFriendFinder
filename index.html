@@ -4,80 +4,62 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="app.js" delayed></script>
-		<
-		<title>Document</title>
+		<script src="app.js" defer></script>
+		<link rel="stylesheet" href="style.css">
+		<title>Furrever Friend Finder</title>
 	</head>
 	<body>
-		<div class="heroSection"></div>
-		<div class="questionContainer">
+		<header>
+			<img src="./assets/0001-19301340058.webp" alt="Logo showing a black outline of a dog">
 			<h1>Find your Furrever Pup</h1>
+			<p>Finding the perfect dog can be a long and stressful process - there are so many things to consider! Luckily this app will help make your decision a little bit easier. Simply select the answer that suits you most for each question below to find out which dog breeds would be the best match for you!</p>
+		</header>
 
-			<div class="questionOneSection">
-				<img src="#" alt="#" />
-				<p>Do you prefer brains or brawn?</p>
-				<form>
-					<label>
-						<select name="smartOrStrong" id="intelligence">
-							<option value="intelligent">
-								I'm into bookworms
-							</option>
-							<option value="strong">
-								I like 'em strong like bull!
-							</option>
-						</select>
-					</label>
-				</form>
-			</div>
-			<div class="questionTwoSection">
-				<img src="#" alt="#" />
-				<p>
-					Do you prefer a dog that's more laid-back or do you like a
-					dog that leads the way?
-				</p>
-				<form>
-					<select name="stubbornOrDocile" id="stubborn">
-						<option value="stubborn">
-							I like a dog who knows what they want
-						</option>
-						<option value="docile">
-							I like a dog that goes with the flow
-						</option>
+		<form>
+			<div class="questionSection">
+				<img src="./assets/508386698_bigsmall.jpg" alt="A large dog looking down at a very small dog" class="dogImg">
+				<div class="questionText">
+					<label for="q1">On a scale of purse dog to miniature horse, how big of a pooch do you want?</label>
+					<select name="q1" id="question1" class="dropdown">
+						<option value="62-150">I want to put Clifford to shame</option>
+						<option value="33-61.9">Large and in charge</option>
+						<option value="24-32.9">Lap dog</option>
+						<option value="1-23.9">Purse size</option>
 					</select>
-					<label for="stubbornOrDocile"></label>
-
-					<!-- Correct all labels -->
-				</form>
-			</div>
-			<div class="questionThreeSection">
-				<img src="#" alt="#" />
-				<p>
-					Do you prefer a quiet night in on the couch or a weekend
-					adventure?
-				</p>
-				<form>
-					<label>
-						<select name="activeOrCalm" id="active">
-							<option value="active">
-								I like a weekend adventure
-							</option>
-							<option value="calm">
-								I like a dog that's a chill potato
-							</option>
-						</select>
-					</label>
-				</form>
+				</div>
 			</div>
 
-			<button id="button" class="resultButton">See your result!</button>
-		</div>
+			<div class="questionSection2">
+				<img src="./assets/Fat-Pugs-R-sb10069042i-001-56a7a3d63df78cf77297cd2f.jpg" alt="A skinny pug next to a chonky pug" class="dogImg">
+				<div class="questionText">
+					<label for="q2">When it comes to weight, are you looking for something that's easy to pick up or one with a more solid build?</label>
+					<select name="q2" id="question2" class="dropdown">
+						<option value="30-99">Army Tank</option>
+						<option value="15-29.9">Average</option>
+						<option value="9-14.9">Heavy enough that it won't blow away</option>
+						<option value="1-8.9">Light as a feather</option>
+					</select>
+				</div>
+			</div>
 
-		<div class="resultSection" id="result">
-			<h1>Purrever Pet!!!</h1>
-		</div>
-
+			<div class="questionSection">
+				<img src="./assets/dogs_1280p_0.jpg" alt="A young golden retriever playfully looking at an older golden retriever" class="dogImg">
+				<div class="questionText">
+					<label for="q3">Are you into more of a short term commitment or want a pup that keeps on ticking?</label>
+					<select name="q3" id="question3" class="dropdown">
+						<option value="16-20">In for the long haul</option>
+						<option value="12-15">Average</option>
+						<option value="7-11">Short but sweet</option>
+					</select>
+				</div>
+			</div>
+			<div class="buttonContainer">
+				<button id="submit-btn" class="button">Fetch your match</button>
+			</div>
+		</form>
+		<div id="results" class="results"></div>
 		<footer>
-			<h3>Made at Juno College</h3>
+			<h3>Made by Sea-Doggies at <a href="https://www.junocollege.com">Juno College</a> 2021</h3>
 		</footer>
 	</body>
 </html>

@@ -1,7 +1,5 @@
-
 const heightQuestion = document.querySelector("#question1");
 const weightQuestion = document.querySelector("#question2");
-const lifeQuestion = document.querySelector("#question3");
 const submitBtn = document.querySelector("#submit-btn");
 const resultsArea = document.querySelector("#results");
 
@@ -28,12 +26,6 @@ function getDogs() {
 		maxWeightRequirement,
 	] = weightQuestion.value.split("-").map((num) => parseInt(num));
 
-	// FINISH GETTING THIS PART TO WORK!
-	// const [
-	// 	minLifeRequirement,
-	// 	maxLifeRequirement,
-	// ] = lifeQuestion.value.split("-").map((num) => parseInt(num));
-
 	fetch(url)
 		.then((response) => {
 			return response.json();
@@ -49,13 +41,6 @@ function getDogs() {
 					.split("-")
 					.map((num) => parseInt(num));
 
-			// FINISH THIS PART!!
-			// let lifeSpan = data.life_span.replace('years', ''); ?????
-
-				// const [minLife, maxLife] = dog.life_span.metric
-				// .split("-")
-				// .map((num) => parseInt(num));
-
 				if (minHeight >= minHeightRequirement) {
 					if (
 						maxHeight <= maxHeightRequirement ||
@@ -66,24 +51,13 @@ function getDogs() {
 							maxWeight <= maxWeightRequirement ||
 							maxWeight === "undefined"
 						)
-					// // FINISH THIS PART TOOOOOOOOOOO!
-					// if (minLife >= minLifeRequirement) 
-					// 	if (
-					// 		maxLife <= maxLifeRequirement ||
-					// 		maxLife === "undefined"
-					// 	)
 						{
 						return dog;
 					}
 				}
 			});
 
-			// NEED TO ADD AN ERROR HANDLER FOR IF THERE ARE NO RESPONSES. RIGHT NOW ITS JUST BLANK.
-
 			result.forEach((dogObj) => {
-
-				// ADD IN ALT TEXT FOR IMAGES
-				// LOOK AT MAKING THE RESULTS SHOW UP IN THEIR OWN DIVS?
 				const element = document.createElement("img");
 				element.setAttribute("src", dogObj.image.url);
 				element.setAttribute("alt", dogObj.name);

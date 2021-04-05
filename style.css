@@ -39,6 +39,124 @@ h1 {
   text-align: center;
 }
 
+@keyframes heartbeat {
+	0% {
+		transform: scale(0.75);
+	}
+
+	20% {
+		transform: scale(1);
+	}
+
+	40% {
+		transform: scale(0.75);
+	}
+
+	60% {
+		transform: scale(1);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+
+	100% {
+		transform: scale(0.75);
+	}
+}
+
+.heart {
+	position: relative;
+	width: 50px;
+	height: 90px;
+	animation: heartbeat 1s infinite;
+}
+
+.heart:before,
+.heart:after {
+	position: absolute;
+	content: "";
+	left: 50px;
+	top: 0;
+	width: 50px;
+	height: 80px;
+	background: red;
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 50px 50px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+
+.heart:after {
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+.heart {
+	position: relative;
+	width: 100px;
+	height: 90px;
+	animation: heartbeat 2s infinite;
+}
+
+.heart:before,
+.heart:after {
+	position: absolute;
+	content: "";
+	left: 50px;
+	top: 0;
+	width: 50px;
+	height: 80px;
+	background: red;
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 50px 50px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+
+.heart:after {
+	left: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+.heartContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .questionContainer {
   align-items: center;
   display: flex;
@@ -84,11 +202,15 @@ label {
   border: none;
   color: #292F36;
   cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'> 🐾</text></svg>") 16 0,auto;
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Lexend', sans-serif; /* Snippet used courtesy of !emojicursor.app*/
   font-size: 16px;
   margin: 20px;
   padding: 10px;
   width: auto;
+}
+
+.dropdown:focus {
+  border: 5px solid #292F36;
 }
 
 .button {
@@ -97,7 +219,11 @@ label {
   padding: 20px;
   margin: 40px;
   cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'> 🦴</text></svg>") 16 0,auto;
-  text-transform: uppercase;
+  text-transform: uppercase; /* Snippet used courtesy of !emojicursor.app*/
+}
+
+.button:focus {
+  border: 5px solid #4ECDC4;
 }
 
 .buttonContainer {
